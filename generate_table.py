@@ -25,4 +25,11 @@ for product in json.load(open("apple-specs-with-current.json")):
         product["name"],
         product["introduction-date"].split("T")[0],
         "$" + unicode(product["original-price"]),
-        "${:d}".format(int(product["stock-shares"] * 599.
+        "${:d}".format(int(product["stock-shares"] * 599.55)),
+    ]
+
+    for field in data:
+        td = etree.SubElement(row, "td")
+        td.text = field
+
+print etree.tostring(table)
