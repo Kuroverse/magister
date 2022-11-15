@@ -7,4 +7,14 @@ from datetime import timedelta
 
 def get_stock_prices(csv_file):
     current_price = 599.55 # March 30, 2012
-    pric
+    prices = {}
+    stockReader = csv.reader(open(csv_file), delimiter=',')
+    
+    stockReader.next() # Throw away column headings
+    
+    for i, row in enumerate(stockReader):
+        if i == 0:
+            current_price = row[6]
+        date_object = datetime.strptime(row[0], '%Y-%m-%d')
+        prices[date_object] = row[6]
+ 
