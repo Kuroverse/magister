@@ -37,4 +37,18 @@ def get_products(json_file):
             
         date = product["introduction-date"]
         date_object = datetime.strptime(date, '%B %d, %Y ')
-        product["intro
+        product["introduction-date"] = date_object
+            
+    return products
+    
+def find_price(prices, date):
+    for i in range(8):
+        try:
+            return float(prices[date])
+        except KeyError:
+            date = date + timedelta(days=1)
+    return False
+        
+    
+def calculate_lost_money(prices, products, current_price):
+  
