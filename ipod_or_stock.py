@@ -17,4 +17,16 @@ def get_stock_prices(csv_file):
             current_price = row[6]
         date_object = datetime.strptime(row[0], '%Y-%m-%d')
         prices[date_object] = row[6]
- 
+        
+    return (prices, float(current_price))
+    
+def get_products(json_file):
+    products = json.load(open(json_file))
+    
+    for product in products:
+        try:
+            price =  product["original-price"]
+        except KeyError:
+            price =  product["original-price-us"]
+
+        match 
