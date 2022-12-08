@@ -29,4 +29,12 @@ def get_products(json_file):
         except KeyError:
             price =  product["original-price-us"]
 
-        match 
+        match = re.match(r"US\$(\d+).*",price)
+        if match:
+            product["original-price"] = float(match.groups()[0])
+        else:
+            product["original-price"] = 0.0
+            
+        date = product["introduction-date"]
+        date_object = datetime.strptime(date, '%B %d, %Y ')
+        product["intro
