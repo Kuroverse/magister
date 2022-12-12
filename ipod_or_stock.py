@@ -51,4 +51,14 @@ def find_price(prices, date):
         
     
 def calculate_lost_money(prices, products, current_price):
-  
+    first_split = datetime(2000,1,21)
+    second_split = datetime(2005,2,28)
+    
+    for product in products:
+        
+        price = float(product["original-price"])
+        
+        if price > 0:
+            intro_date = product["introduction-date"]
+            old_stock_price = find_price(prices, intro_date)
+      
