@@ -72,4 +72,13 @@ def calculate_lost_money(prices, products, current_price):
     return products
 
 
-if __name__ == '__main_
+if __name__ == '__main__':
+    stock_csv = "apple_stock_data.csv"
+    product_csv = "apple_products_data.csv"
+    
+    prices, current_price = get_stock_prices(stock_csv)
+    products = get_products('apple-specs.json')
+    products = calculate_lost_money(prices, products, current_price)
+    
+    specs = open('apple-specs-with-current.json', 'w')
+   
