@@ -61,4 +61,15 @@ def calculate_lost_money(prices, products, current_price):
         if price > 0:
             intro_date = product["introduction-date"]
             old_stock_price = find_price(prices, intro_date)
-      
+            shares = price / old_stock_price
+            product["stock-shares"] = shares
+        else:
+            shares = 0
+            product["stock-shares"] = shares
+
+        product["introduction-date"] = product["introduction-date"].isoformat()
+    
+    return products
+
+
+if __name__ == '__main_
