@@ -49,4 +49,8 @@ def parse_all_products():
         "http://www.everymac.com/systems/apple/powerbook_g4/index-powerbook-g4.html",
         "http://www.everymac.com/systems/apple/powermac_g5/index-powermac-g5.html",
         "http://www.everymac.com/systems/apple/mac_pro/index-macpro.html",
-        "http://www.everymac.com/systems
+        "http://www.everymac.com/systems/apple/xserve/index-xserve.html",
+        "http://www.everymac.com/systems/apple/imac/index-imac.html",
+        "http://www.everymac.com/systems/apple/emac/index-emac.html",
+        "http://www.everymac.com/systems/apple/mac_mini/index-macmini.html",
+        "http://www.everymac.co
