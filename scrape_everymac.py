@@ -31,4 +31,14 @@ def unescape(text):
             except ValueError:
                 pass
         else:
-            # named ent
+            # named entity
+            try:
+                text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+            except KeyError:
+                pass
+        return text # leave as is
+    return re.sub("&#?\w+;", fixup, text)
+    
+def parse_all_products():
+    urls = [
+        "http://www.everymac.com/systems/apple/powermac_g3/index-powe
