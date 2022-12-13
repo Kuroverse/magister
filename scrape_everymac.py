@@ -41,4 +41,8 @@ def unescape(text):
     
 def parse_all_products():
     urls = [
-        "http://www.everymac.com/systems/apple/powermac_g3/index-powe
+        "http://www.everymac.com/systems/apple/powermac_g3/index-powermac-g3.html",
+        "http://www.everymac.com/systems/apple/mac_server_g3/index-mac-server-g3.html",
+        "http://www.everymac.com/systems/apple/powerbook_g3/index-powerbook-g3.html",
+        "http://www.everymac.com/systems/apple/powermac_g4/index-powermac-g4.html",
+        "http://www.everymac.com/systems/apple/mac_serve
