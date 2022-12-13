@@ -81,4 +81,6 @@ if __name__ == '__main__':
     products = calculate_lost_money(prices, products, current_price)
     
     specs = open('apple-specs-with-current.json', 'w')
-   
+    json.dump(products, specs, sort_keys = True, indent = 4)
+    specs.close()
+    
