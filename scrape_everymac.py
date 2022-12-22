@@ -53,4 +53,8 @@ def parse_all_products():
         "http://www.everymac.com/systems/apple/imac/index-imac.html",
         "http://www.everymac.com/systems/apple/emac/index-emac.html",
         "http://www.everymac.com/systems/apple/mac_mini/index-macmini.html",
-        "http://www.everymac.co
+        "http://www.everymac.com/systems/apple/ibook/index-ibook.html",
+        "http://www.everymac.com/systems/apple/macbook/index-macbook.html",
+        "http://www.everymac.com/systems/apple/macbook_pro/index-macbookpro.html",
+        "http://www.everymac.com/systems/apple/macbook-air/index-macbook-air.html",
+        "http://www.everymac.com/syste
