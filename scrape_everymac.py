@@ -63,4 +63,18 @@ def parse_all_products():
         "http://www.everymac.com/systems/apple/ipad/index-ipad-specs.html",
     ]
     
-    data =
+    data = []
+    
+    for url in urls:
+        products = parse_products(url)
+        data += products
+        specs = open('apple-specs.json', 'w')
+        json.dump(data, specs, sort_keys = True, indent = 4)
+        specs.close()
+        
+def url_fetch(url):
+    print url
+
+    try:
+        os.mkdir("cache")
+    except OSError
