@@ -57,4 +57,10 @@ def parse_all_products():
         "http://www.everymac.com/systems/apple/macbook/index-macbook.html",
         "http://www.everymac.com/systems/apple/macbook_pro/index-macbookpro.html",
         "http://www.everymac.com/systems/apple/macbook-air/index-macbook-air.html",
-        "http://www.everymac.com/syste
+        "http://www.everymac.com/systems/apple/consumer_electronics/index-ipod.html",
+        "http://www.everymac.com/systems/apple/apple-tv/index-appletv.html",
+        "http://www.everymac.com/systems/apple/iphone/index-iphone-specs.html",
+        "http://www.everymac.com/systems/apple/ipad/index-ipad-specs.html",
+    ]
+    
+    data =
