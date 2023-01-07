@@ -77,4 +77,20 @@ def url_fetch(url):
 
     try:
         os.mkdir("cache")
-    except OSError
+    except OSError:
+        pass
+
+    _, filename = os.path.split(url)
+    cached_file = os.path.join("cache", filename)
+
+    if not os.path.exists(cached_file):
+        urllib.urlretrieve(url, cached_file) 
+
+    return open(cached_file)
+ 
+
+def parse_products(url):
+    products = []
+
+    soup = BeautifulSoup(url_fetch(url))
+    u = urlpar
