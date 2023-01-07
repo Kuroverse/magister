@@ -93,4 +93,11 @@ def parse_products(url):
     products = []
 
     soup = BeautifulSoup(url_fetch(url))
-    u = urlpar
+    u = urlparse.urlparse(url)
+    
+    for span in soup.findAll('span', id="contentcenter_specs_externalnav_2"):
+        a = span.a
+        if a:
+            path = os.path.join(os.path.dirname(u.path), a['href'])
+            new_url = "%s://%s%s" % (u.scheme, u.netloc, path)
+            product = parse_product(
