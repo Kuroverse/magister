@@ -100,4 +100,17 @@ def parse_products(url):
         if a:
             path = os.path.join(os.path.dirname(u.path), a['href'])
             new_url = "%s://%s%s" % (u.scheme, u.netloc, path)
-            product = parse_product(
+            product = parse_product(new_url)
+            if product != None:
+                products.append(product)
+    
+    return products
+
+def parse_product(url):
+    try:
+        soup = BeautifulSoup(url_fetch(url))
+    except HTMLParser.HTMLParseError:
+        print "Could not parse %s" % url
+        return None
+        
+    product =
