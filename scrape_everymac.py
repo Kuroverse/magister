@@ -113,4 +113,15 @@ def parse_product(url):
         print "Could not parse %s" % url
         return None
         
-    product =
+    product = {}
+    
+    name = soup.find('h3')
+    product["name"] = unescape(name.contents[0].replace("Specs", "").strip())
+    
+    # FIND ALL DETAILS
+    for table in soup.findAll('table'):
+        for tr in table.findAll('tr'):
+            detail = ""
+            value = ""
+            for td in tr.findAll('td'):
+         
