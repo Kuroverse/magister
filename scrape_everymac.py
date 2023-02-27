@@ -143,4 +143,12 @@ def parse_product(url):
                             detail = detail.replace("Min.", "minimum")
                             detail = detail.replace("Max.", "maximum")
                             detail = detail.replace("Avg.", "average")
-                     
+                            detail = detail.replace("Est.", "estimated")
+                            key = slugify(unescape(detail))
+                            value = str(value)
+                            product[key] = unescape(value.replace("*",""))
+                            
+    return product
+
+parse_all_products()
+
