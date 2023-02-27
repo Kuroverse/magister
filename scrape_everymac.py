@@ -138,4 +138,9 @@ def parse_product(url):
                         if value == None or detail == None:
                             pass
                         elif "Details:" not in detail:
-                            detail = detail.replace("Incl.", "in
+                            detail = detail.replace("Incl.", "included")
+                            detail = detail.replace("Int.", "internal")
+                            detail = detail.replace("Min.", "minimum")
+                            detail = detail.replace("Max.", "maximum")
+                            detail = detail.replace("Avg.", "average")
+                     
