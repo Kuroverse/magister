@@ -132,4 +132,10 @@ def parse_product(url):
                         
                 if len(td.contents) > 0:                    
                     if colon: 
-                        detail = td.contents[-1:
+                        detail = td.contents[-1:][0]
+                    else:
+                        value = td.contents[-1:][0]
+                        if value == None or detail == None:
+                            pass
+                        elif "Details:" not in detail:
+                            detail = detail.replace("Incl.", "in
