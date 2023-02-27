@@ -124,4 +124,12 @@ def parse_product(url):
             detail = ""
             value = ""
             for td in tr.findAll('td'):
-         
+                colon = False
+            
+                for i in td.contents:
+                    if ":" in i:
+                        colon = True
+                        
+                if len(td.contents) > 0:                    
+                    if colon: 
+                        detail = td.contents[-1:
